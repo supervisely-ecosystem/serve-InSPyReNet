@@ -1,0 +1,6 @@
+__pycache__
+*.pth
+*.pt
+results
+app_data
+test
