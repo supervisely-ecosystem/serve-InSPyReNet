@@ -7,3 +7,4 @@ gdown
 onedrivedownloader
 transparent-background
 kornia==0.5.11
+Pillow==9.2.0

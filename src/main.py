@@ -1,7 +1,7 @@
 import os, sys
 import torch
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageOps
 
 import supervisely as sly
 from dotenv import load_dotenv
@@ -20,9 +20,6 @@ load_dotenv("local.env")
 load_dotenv(os.path.expanduser("~/supervisely.env"))
 root_source_path = str(Path(__file__).parents[1])
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
-print("Using device:", device)
-
 class InSPyReNet(sly.nn.inference.SalientObjectSegmentation):
     def load_on_device(
         self,
@@ -39,7 +36,7 @@ class InSPyReNet(sly.nn.inference.SalientObjectSegmentation):
         self.device = device
 
         sly.logger.info(f"Downloading the model {self.model_name}...")
-        weigths_path = f"/tmp/{self.model_name}.pth"
+        weigths_path = os.path.join(model_dir, f"{self.model_name}.pth")
         res = api.download_weights(model_info["weights_url"], weigths_path)
         if not res:
             res = api.download_weights_alt(model_info["weights_url_alt"], weigths_path)
@@ -55,6 +52,7 @@ class InSPyReNet(sly.nn.inference.SalientObjectSegmentation):
         threshold_default = self.custom_inference_settings_dict["pixel_confidence_threshold"]
         threshold = settings.get("pixel_confidence_threshold", threshold_default)
         img = Image.open(image_path).convert('RGB')
+        img = ImageOps.exif_transpose(img)
         mask = self.model.process(img, type='map')  # RGB map
         mask = mask[...,0]
         mask = self.binarize_mask(mask, threshold)
@@ -87,6 +85,7 @@ class InSPyReNet(sly.nn.inference.SalientObjectSegmentation):
         info = super().get_info()
         info["videos_support"] = False
         info["async_video_inference_support"] = False
+        info["model_name"] = self.model_name
         return info
 
     def get_classes(self) -> List[str]:
@@ -104,6 +103,8 @@ m = InSPyReNet(
 if sly.is_production():
     m.serve()
 else:
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print("Using device:", device)
     m.load_on_device(m.model_dir, device)
     image_path = "./demo_data/image_03.jpg"
     # rect = sly.Rectangle(360, 542, 474, 700).to_json()
