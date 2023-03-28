@@ -29,7 +29,7 @@ class InSPyReNet(sly.nn.inference.SalientObjectSegmentation):
         if self.gui:
             self.model_name = self.gui.get_checkpoint_info()["Model"]
         else:
-            self.model_name = "SwinB"
+            self.model_name = "SwinB HD"
             sly.logger.warn(f"GUI can't be used, default model is {self.model_name}.")
         
         model_info = model_zoo[self.model_name]

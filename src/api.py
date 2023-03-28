@@ -6,7 +6,9 @@ from src.model_zoo import model_zoo
 
 
 def build_model(model_name, weights_path, device):
-    fast = model_name == "SwinB low-res"
+    fast = model_name == "SwinB 384x384"
+    if fast:
+        print(f"Inference in 384x384")
     return Remover(fast=fast, device=device, ckpt=weights_path)
 
 def download_weights(url, output):
