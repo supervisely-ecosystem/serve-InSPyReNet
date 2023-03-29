@@ -20,5 +20,8 @@
   "instance_version": "6.7.16",
   "entrypoint": "python -m uvicorn src.main:m.app --host 0.0.0.0 --port 8000 --ws websockets",
   "port": 8000,
-  "task_location": "application_sessions"
+  "task_location": "application_sessions",
+  "poster": "https://user-images.githubusercontent.com/115161827/228558305-dca13b94-a8c1-467e-883f-3a5c982cb91c.jpg",
+  "icon_cover": true,
+  "icon": "https://user-images.githubusercontent.com/115161827/228558398-518f897f-49db-4dc0-865b-2c06e8e46c21.png"
 }
