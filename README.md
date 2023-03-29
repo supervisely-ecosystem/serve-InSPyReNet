@@ -1,3 +1,24 @@
+<div align="center" markdown>
+<img src="https://user-images.githubusercontent.com/115161827/228558305-dca13b94-a8c1-467e-883f-3a5c982cb91c.jpg"/>  
+
+# Serve InSPyReNet
+
+<p align="center">
+  <a href="#Overview">Overview</a> •
+  <a href="#Pretrained-Models">Pretrained Models</a> •
+  <a href="#How-To-Run">How To Run</a> •
+  <a href="#Related-apps">Related Apps</a> •
+  <a href="#Acknowledgment">Acknowledgment</a>
+</p>
+
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/serve-InSPyReNet)
+[![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervise.ly/slack)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/serve-InSPyReNet)
+[![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/serve-InSPyReNet.png)](https://supervise.ly)
+[![runs](https://app.supervise.ly/img/badges/runs/supervisely-ecosystem/serve-InSPyReNet.png)](https://supervise.ly)
+
+</div>
+
 ## Overview
 
 This app deploys pretrained **InSPyReNet** model as a Supervisely Application for **Salient Instance Segmentation** tasks.
