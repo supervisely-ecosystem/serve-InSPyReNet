@@ -33,7 +33,7 @@ In our experience, **InSPyReNet** could give near perfect predictions, but it us
 ## Pretrained models
 
 The app can deploy a pretrained model in two regimes:
-- `Swin-B HD` with HD resolution (up to 1280 px in longer image side). Gives near perfect predictions but allocates a lot of CUDA memory.
+- `Swin-B HD` with HD resolution (up to 1280 px in the longer image side).
 - `Swin-B 384x384`, which is inferred in constant 384x384 resolution and allocates less CUDA memory.
 
 **Note:** `Swin-B HD` could require a GPU with large CUDA memory at inference (about 8-10 GB).
@@ -59,8 +59,8 @@ The models are trained on a massive collection of datasets for Salient Object De
 
 ## Inference Settings
 
-- **bbox_padding**: (default 66%) when applying the model to a crop of an image (ROI), this bbox_padding will expand the crop at the boundaries, getting more image context to the model (may lead to more accurate preditctions). The value can be measured either in pixels (e.g. `100px`) or in percentages (e.g. `10%`)
-- **pixel_confidence_threshold**: (default 150). The model predicts a "soft" masks, i.e. the mask values are in range 0-255, but the mask in Supervisely is a Bitmap and has only two values: 0-1 (one bit). With this threshold we will treat the pixels in the mask as **0** if they are below the **threshold** and as **1** if above.
+- `bbox_padding`: (default `66%`) when applying the model to a crop of an image (ROI), this bbox_padding will expand the crop at the boundaries, getting more image context to the model (may lead to more accurate preditctions). The value can be measured either in pixels (e.g. `100px`) or in percentages (e.g. `10%`)
+- `pixel_confidence_threshold`: (default `150`). The model predicts a "soft" masks, i.e. the mask values are in range 0-255, but the mask in Supervisely is a Bitmap and has only two values: 0-1 (one bit). With this threshold we will treat the pixels in the mask as **0** if they are below the **threshold** and as **1** if above.
 
 
 ## Related Apps
