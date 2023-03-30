@@ -46,18 +46,18 @@ The models are trained on a massive collection of datasets for Salient Object De
 
 ## How To Run
 
-1. Start the application
+1. Start the application from Ecosystem
 2. Open the app in your browser
 
 <img src="https://user-images.githubusercontent.com/31512713/228279474-db869e95-f906-4ee6-b9f5-fe779a945dab.png" width="80%"/>
 
-3. Choose the model you want to serve
+3. Select the model you want to deploy
 4. Click **"SERVE"** button.
-5. That's it! Now you can use other apps with your model.
+5. ✅ That's it! Now you can use other apps with your model.
 
 ## Related Apps
 
-You can use served model in next Supervisely Applications ⬇️ 
+You can use deployed model in the following Supervisely Applications ⬇️ 
 
 - [Apply NN to Images Project](https://ecosystem.supervise.ly/apps/nn-image-labeling/project-dataset) - app allows to play with different inference options and visualize predictions in real time.  Once you choose inference settings you can apply model to all images in your project to visually analyse predictions and perform automatic data pre-labeling.   
     <img data-key="sly-module-link" data-module-slug="supervisely-ecosystem/nn-image-labeling/project-dataset" src="https://i.imgur.com/M2Tp8lE.png" height="70px" margin-bottom="20px"/>  
@@ -72,5 +72,5 @@ You can use served model in next Supervisely Applications ⬇️
 
 ## Acknowledgment
 
-- Based on: [https://github.com/plemeri/InSPyReNet](https://github.com/plemeri/InSPyReNet)
+- Based on: [https://github.com/plemeri/InSPyReNet](https://github.com/plemeri/InSPyReNet) ![GitHub Org's stars](https://img.shields.io/github/stars/plemeri/InSPyReNet?style=social)
 - Paper: [https://arxiv.org/abs/2209.09475](https://arxiv.org/abs/2209.09475)
