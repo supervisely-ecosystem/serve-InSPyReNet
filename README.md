@@ -25,9 +25,9 @@ This app deploys pretrained **InSPyReNet** model as a Supervisely Application fo
 
 Models under a **Salient Instance Segmentation** task are usually used for separating foreground from background. They predict a mask for the foreground object. These models are **class-agnostic**, which means they can't predict a class label for an object.
 
-The app is a **serving App** that allows you to apply the model to an image inside the **Supervisely platform** or beyond it (using the [Inference Session API](https://developer.supervise.ly/app-development/neural-network-integration/inference-api-tutorial)).
+The app allows you to apply the model to an image inside the **Supervisely platform** or beyond it (using the [Inference Session API](https://developer.supervise.ly/app-development/neural-network-integration/inference-api-tutorial)).
 
-In our experience, this model could give near perfect predictions, but it uses a lot of **CUDA memory** comparing to other models at this task.
+In our experience, **InSPyReNet** could give near perfect predictions, but it uses a lot of **CUDA memory** comparing to other models at this task.
 
 ## Pretrained models
 
