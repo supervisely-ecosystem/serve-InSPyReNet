@@ -36,7 +36,7 @@ The app can deploy a pretrained model in two regimes:
 - `Swin-B HD` with HD resolution (up to 1280 px in the longer image side).
 - `Swin-B 384x384`, which is inferred in constant 384x384 resolution and allocates less CUDA memory.
 
-**Note:** `Swin-B HD` could require a GPU with large CUDA memory at inference (about 8-10 GB).
+**Note:** `Swin-B HD` could require a GPU with large CUDA memory at inference (about 6-8 GB for one image).
 
 The models are trained on a massive collection of datasets for Salient Object Detection: DUTS-TR, HRSOD-TR, UHRSD-TR, DIS-TR, DUTS-TE, DUT-OMRON, ECSSD,HKU-IS, PASCAL-S, DAVIS-S, HRSOD-TE,UHRSD-TE, FSS-1000, MSRA-10K, DIS-VD, DIS-TE1, DIS-TE2, DIS-TE3, DIS-TE4
 
