@@ -42,7 +42,9 @@ The models are trained on a massive collection of datasets for Salient Object De
 
 
 ### Prediction preview:
-![our evaluation](https://raw.githubusercontent.com/supervisely-ecosystem/serve-InSPyReNet/master/demo_data/image_03_prediction.jpg)
+| Input    | Prediction   |
+| -------- | ------------ |
+| ![bird](https://user-images.githubusercontent.com/31512713/229130681-e5b12330-930b-4920-9a6c-0118453fcc63.jpg) | ![inspyrenet](https://user-images.githubusercontent.com/31512713/229130686-2710962a-7eac-4a6d-9c3b-f36db8ff4c9c.jpg) |
 
 
 ## How To Run
