@@ -12,9 +12,9 @@
   <a href="#Acknowledgment">Acknowledgment</a>
 </p>
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/serve-InSPyReNet)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/serve-inspyrenet)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervise.ly/slack)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/serve-InSPyReNet)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/serve-inspyrenet)
 [![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/serve-inspyrenet.png)](https://supervise.ly)
 [![runs](https://app.supervise.ly/img/badges/runs/supervisely-ecosystem/serve-inspyrenet.png)](https://supervise.ly)
 
@@ -32,11 +32,11 @@ In our experience, **InSPyReNet** could give near perfect predictions, but it us
 
 ## Pretrained models
 
-The app can deploy a pretrained model in two regimes:
-- `Swin-B HD` with HD resolution (up to 1280 px in the longer image side).
-- `Swin-B 384x384`, which is inferred in constant 384x384 resolution and allocates less CUDA memory.
+The app can deploy pretrained model in two regimes:
+- `Swin-B HD` with HD resolution (up to 1280 px in the longer image side). Good with large images, but may make empty or incorrect predictions for small images.
+- `Swin-B 384x384`, which is inferred in constant 384x384 resolution and allocates less CUDA memory. Choose it if you have small images or you don't need to predict very small details in the image.
 
-**Note:** `Swin-B HD` could require a GPU with large CUDA memory at inference (about 6-8 GB for one image).
+**Note:** `Swin-B HD` could require a GPU with large CUDA memory at inference (about 6 GB for an HD image).
 
 **Trained on** a massive collection of datasets for Salient Object Detection: DUTS-TR, HRSOD-TR, UHRSD-TR, DIS-TR, DUTS-TE, DUT-OMRON, ECSSD,HKU-IS, PASCAL-S, DAVIS-S, HRSOD-TE,UHRSD-TE, FSS-1000, MSRA-10K, DIS-VD, DIS-TE1, DIS-TE2, DIS-TE3, DIS-TE4
 
