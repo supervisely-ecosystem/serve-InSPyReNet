@@ -85,5 +85,5 @@ You can use deployed model in the following Supervisely Applications ⬇️
 
 ## Acknowledgment
 
-- Based on: [https://github.com/plemeri/InSPyReNet](https://github.com/plemeri/InSPyReNet) ![GitHub Org's stars](https://img.shields.io/github/stars/plemeri/InSPyReNet?style=social)
+- Based on: [https://github.com/plemeri/InSPyReNet](https://github.com/plemeri/InSPyReNet) ![GitHub Org's stars](https://img.shields.io/github/stars/plemeri/InSPyReNet?style=social). Code in this repository is distributed under the MIT license.
 - Paper: [https://arxiv.org/abs/2209.09475](https://arxiv.org/abs/2209.09475)
