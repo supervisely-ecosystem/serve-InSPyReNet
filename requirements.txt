@@ -1,6 +1,7 @@
 --extra-index-url https://download.pytorch.org/whl/lts/1.8/cu111
-# supervisely==6.72.68
-git+https://github.com/supervisely/supervisely.git@fix-serving-model-download-progress
+
+supervisely==6.72.136
+
 torch==1.8.2
 torchvision==0.9.2
 timm
